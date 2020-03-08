@@ -14,12 +14,11 @@ public class Solution2588 {
 
         firstNumber = scan.nextInt();
         secondNumber = scan.nextInt();
+        scan.close();
 
         System.out.println(firstNumber * (secondNumber % 10));
         System.out.println(firstNumber * (secondNumber % 100 / 10));
         System.out.println(firstNumber * (secondNumber / 100));
         System.out.println(firstNumber * secondNumber);
-
-        scan.close();
     }
 }

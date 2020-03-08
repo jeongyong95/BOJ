@@ -18,6 +18,7 @@ public class Solution10430 {
             number[1] = scan.nextInt();
             number[2] = scan.nextInt();
         } while (number[0] < 2 || number[2] > 10000);
+        scan.close();
 
         int A = number[0], B = number[1], C = number[2];
 
@@ -25,7 +26,5 @@ public class Solution10430 {
         System.out.println((A % C + B % C) % C);
         System.out.println((A * B) % C);
         System.out.println((A % C * B % C) % C);
-
-        scan.close();
     }
 }

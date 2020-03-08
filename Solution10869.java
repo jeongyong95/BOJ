@@ -15,13 +15,12 @@ public class Solution10869 {
             A = scan.nextInt();
             B = scan.nextInt();
         } while (A < 1 || B > 10000);
+        scan.close();
 
         System.out.println(A + B);
         System.out.println(A - B);
         System.out.println(A * B);
         System.out.println(A / B);
         System.out.println(A % B);
-
-        scan.close();
     }
 }

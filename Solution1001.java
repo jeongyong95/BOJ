@@ -13,9 +13,8 @@ public class Solution1001 {
             A = scan.nextInt();
             B = scan.nextInt();
         } while (A < 0 || B > 10);
+        scan.close();
 
         System.out.println(A - B);
-
-        scan.close();
     }
 }

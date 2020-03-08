@@ -15,9 +15,8 @@ public class Solution1008 {
             A = scan.nextInt();
             B = scan.nextInt();
         } while (A < 0 || B > 10);
+        scan.close();
 
         System.out.println((double) A / (double) B);
-
-        scan.close();
     }
 }
