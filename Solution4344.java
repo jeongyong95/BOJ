@@ -1,4 +1,8 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 /*  평균은 넘겠지
     대학생 새내기들의 90%는 자신이 반에서 평균은 넘는다고 생각한다. 당신은 그들에게 슬픈 진실을 알려줘야 한다.
@@ -8,37 +12,42 @@ import java.util.Scanner;
     각 케이스마다 한 줄씩 평균을 넘는 학생들의 비율을 반올림하여 소수점 셋째 자리까지 출력한다.
  */
 public class Solution4344 {
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int testCase = scanner.nextInt();
-        int jumper = 0;
-        int[][] caseArray = new int[testCase][];
-        double[] average = new double[testCase];
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
+        int count, testCase = Integer.parseInt(bufferedReader.readLine());
+        Double[] avg = new Double[testCase], result = new Double[testCase];
+        Double[][] scores = new Double[testCase][];
 
         for (int i = 0; i < testCase; i++) {
-            int setCase = scanner.nextInt();
-            int sum = 0;
-            caseArray[i] = new int[setCase];
-            for (int j = 0; j < caseArray[i].length; j++) {
-                caseArray[i][j] = scanner.nextInt();
-                sum += caseArray[i][j];
-                if (j == caseArray[i].length - 1) {
-                    average[i] = sum / caseArray[i].length;
+            String[] temp = bufferedReader.readLine().split(" ");
+            count = Integer.parseInt(temp[0]);
+            scores[i] = new Double[count];
+            int sum = 0, avgCounter = 0;
+
+            for (int j = 0; j < count; j++) {
+                scores[i][j] = Double.parseDouble(temp[j + 1]);
+                sum += scores[i][j];
+            }
+            avg[i] = (double) (sum / count);
+
+            for (int j = 0; j < scores[i].length; j++) {
+                if (scores[i][j] > avg[i]) {
+                    avgCounter++;
+
                 }
             }
+            System.out.println(avgCounter);
+            result[i] = (double) (avgCounter / count);
+            System.out.println(result[i]);
         }
-
-        for (int i = 0; i < caseArray.length; i++) {
-            for (int j = 0; j < caseArray[i].length; j++) {
-                if (caseArray[i][j] > average[i]) {
-                    jumper++;
-                }
-            }
-            System.out.println(jumper / caseArray[i].length);
-            jumper = 0;
+        bufferedReader.close();
+        System.out.println(result[0]);
+        for (int i = 0; i < result.length; i++) {
+            bufferedWriter.write(result[i] + "\n");
         }
+        bufferedWriter.flush();
+        bufferedWriter.close();
 
-        scanner.close();
     }
 }

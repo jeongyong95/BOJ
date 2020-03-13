@@ -5,8 +5,8 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
 /*  부녀회장이 될테야
-    평소 반상회에 참석하는 것을 좋아하는 주희는 이번 기회에 부녀회장이 되고 싶어 각 층의 사람들을 불러 모아 반상회를 주최하려고 한다.
-    이 아파트에 거주를 하려면 조건이 있는데, 
+    평소 반상회에 참석하는 것을 좋아하는 주희는 이번 기회에 부녀회장이 되고 싶어 
+    각 층의 사람들을 불러 모아 반상회를 주최하려고 한다. 이 아파트에 거주를 하려면 조건이 있는데, 
     “a층의 b호에 살려면 자신의 아래(a-1)층의 1호부터 b호까지 사람들의 수의 합만큼 사람들을 데려와 살아야 한다” 는 
     계약 조항을 꼭 지키고 들어와야 한다.
     아파트에 비어있는 집은 없고 모든 거주민들이 이 계약 조건을 지키고 왔다고 가정했을 때, 
@@ -19,9 +19,41 @@ import java.io.OutputStreamWriter;
 public class Solution2775 {
 
     public static void main(String[] args) throws IOException {
+        // k : 층, n : 호
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
+        int k, n, testCase = Integer.parseInt(bufferedReader.readLine());
+        int[] citizen = new int[testCase];
+        int[][] apart = new int[15][15];
 
+        for (int j = 0; j <= 14; j++) {
+            for (int j2 = 1; j2 <= 14; j2++) {
+                if (j == 0) {
+                    apart[j][j2] = j2;
+                    continue;
+                }
+
+                if (j2 == 1) {
+                    apart[j][1] = 1;
+                    continue;
+                }
+
+                apart[j][j2] = apart[j][j2 - 1] + apart[j - 1][j2];
+            }
+        }
+
+        for (int i = 0; i < testCase; i++) {
+            k = Integer.parseInt(bufferedReader.readLine());
+            n = Integer.parseInt(bufferedReader.readLine());
+            citizen[i] = apart[k][n];
+        }
+        bufferedReader.close();
+
+        for (int i = 0; i < citizen.length; i++) {
+            bufferedWriter.write(citizen[i] + "\n");
+        }
+        bufferedWriter.flush();
+        bufferedWriter.close();
     }
 
 }

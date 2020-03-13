@@ -1,0 +1,469 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution4948",
+            "request": "launch",
+            "mainClass": "Solution4948",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution1929",
+            "request": "launch",
+            "mainClass": "Solution1929",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution2581",
+            "request": "launch",
+            "mainClass": "Solution2581",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution1978",
+            "request": "launch",
+            "mainClass": "Solution1978",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution1000<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution1000",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution1001<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution1001",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution1008<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution1008",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution10171<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution10171",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution10172<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution10172",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution10250<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution10250",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution10430<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution10430",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution1065<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution1065",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution10718<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution10718",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution10809<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution10809",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution10817<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution10817",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution10818<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution10818",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution10869<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution10869",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution10871<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution10871",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution10950<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution10950",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution10951<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution10951",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution10952<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution10952",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution10998<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution10998",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution11021<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution11021",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution11022<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution11022",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution1110<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution1110",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution1152<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution1152",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution1157<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution1157",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution11654<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution11654",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution11720<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution11720",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution1193<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution1193",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution1316<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution1316",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution1330<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution1330",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution1546<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution1546",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution1546_2<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution1546_2",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution15552<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution15552",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution15596<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution15596",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution1712<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution1712",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2292<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution2292",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2438<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution2438",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2439<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution2439",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2557<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution2557",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2562<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution2562",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2577<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution2577",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2577_2<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution2577_2",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2588<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution2588",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2675<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution2675",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2739<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution2739",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2741<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution2741",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2742<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution2742",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2753<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution2753",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2775<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution2775",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2839<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution2839",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2869<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution2869",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2884<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution2884",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2908<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution2908",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2941<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution2941",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution3052<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution3052",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution4344<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution4344",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution4673<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution4673",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution5534<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution5534",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution5622<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution5622",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution8393<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution8393",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution8958<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution8958",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution9498<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "Solution9498",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-test<BOJ_53373b11>",
+            "request": "launch",
+            "mainClass": "test",
+            "projectName": "BOJ_53373b11"
+        }
+    ]
+}
