@@ -17,10 +17,12 @@ public class Solution1330 {
 
         a = scan.nextInt();
         b = scan.nextInt();
+        scan.close();
 
         if (a > b) {
             System.out.println(">");
         }
+
         if (a < b) {
             System.out.println("<");
         }
@@ -29,6 +31,5 @@ public class Solution1330 {
             System.out.println("==");
         }
 
-        scan.close();
     }
 }

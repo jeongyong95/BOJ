@@ -15,13 +15,12 @@ public class Solution2753 {
         Scanner scan = new Scanner(System.in);
 
         year = scan.nextInt();
+        scan.close();
 
         if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
             System.out.println("1");
         } else {
             System.out.println("0");
         }
-
-        scan.close();
     }
 }

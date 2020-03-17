@@ -9,6 +9,8 @@ public class Solution9498 {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        scan.close();
+
         int score;
 
         do {
@@ -26,7 +28,5 @@ public class Solution9498 {
         } else {
             System.out.println("F");
         }
-
-        scan.close();
     }
 }

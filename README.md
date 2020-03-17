@@ -1,20 +1,18 @@
-# 곱셈
+# 구구단
 
 백준 온라인 저지 알고리즘 문제풀이
 
 ## 문제
 
-(세 자리 수) × (세 자리 수)는 다음과 같은 과정을 통하여 이루어진다.
-https://www.acmicpc.net/upload/images/f5NhGHVLM4Ix74DtJrwfC97KepPl27s%20(1).png  
-(1)과 (2)위치에 들어갈 세 자리 자연수가 주어질 때 (3), (4), (5), (6)위치에 들어갈 값을 구하는 프로그램을 작성하시오.
+N을 입력받은 뒤, 구구단 N단을 출력하는 프로그램을 작성하시오. 출력 형식에 맞춰서 출력하면 된다.
 
 ## 입력
 
-첫째 줄에 (1)의 위치에 들어갈 세 자리 자연수가, 둘째 줄에 (2)의 위치에 들어갈 세자리 자연수가 주어진다.
+첫째 줄에 N이 주어진다. N은 1보다 크거나 같고, 9보다 작거나 같다.
 
 ## 출력
 
-첫째 줄부터 넷째 줄까지 차례대로 (3), (4), (5), (6)에 들어갈 값을 출력한다.
+출력형식과 같게 N*1부터 N*9까지 출력한다.
 
 ## 코드
 
@@ -25,17 +23,17 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        int firstNumber, secondNumber;
         Scanner scan = new Scanner(System.in);
+        int n;
 
-        firstNumber = scan.nextInt();
-        secondNumber = scan.nextInt();
+        do {
+            n = scan.nextInt();
+        } while (n > 9 || n < 1);
         scan.close();
 
-        System.out.println(firstNumber * (secondNumber % 10));
-        System.out.println(firstNumber * (secondNumber % 100 / 10));
-        System.out.println(firstNumber * (secondNumber / 100));
-        System.out.println(firstNumber * secondNumber);
+        for (int i = 1; i <= 9; i++) {
+            System.out.println(n + " * " + i + " = " + n * i);
+        }
     }
 }
 </code></pre>

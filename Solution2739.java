@@ -14,11 +14,10 @@ public class Solution2739 {
         do {
             n = scan.nextInt();
         } while (n > 9 || n < 1);
+        scan.close();
 
         for (int i = 1; i <= 9; i++) {
             System.out.println(n + " * " + i + " = " + n * i);
         }
-
-        scan.close();
     }
 }

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /*  A+B - 4
@@ -13,7 +14,7 @@ public class Solution10951 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int a, b;
-        ArrayList result = new ArrayList<Integer>();
+        List<Integer> result = new ArrayList<Integer>();
 
         do {
             a = scanner.nextInt();
