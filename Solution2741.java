@@ -14,11 +14,10 @@ public class Solution2741 {
         do {
             n = scan.nextInt();
         } while (n < 0 || n > 100000);
+        scan.close();
 
         for (int i = 1; i <= n; i++) {
             System.out.println(i);
         }
-
-        scan.close();
     }
 }

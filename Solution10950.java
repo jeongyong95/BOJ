@@ -20,11 +20,10 @@ public class Solution10950 {
             b = scan.nextInt();
             result[i] = a + b;
         }
+        scan.close();
 
         for (int i = 0; i < t; i++) {
             System.out.println(result[i]);
         }
-
-        scan.close();
     }
 }

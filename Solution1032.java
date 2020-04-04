@@ -23,19 +23,39 @@ import java.io.OutputStreamWriter;
     첫째 줄에 패턴을 출력하면 된다.
  */
 public class Solution1032 {
-
+    // 답지봤당ㅠㅠ
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 
         int testCase = Integer.parseInt(bufferedReader.readLine());
         String[] fileNameStrings = new String[testCase];
+        String sameString = "";
+        boolean isSameFlag = false;
 
         for (int i = 0; i < fileNameStrings.length; i++) {
             fileNameStrings[i] = bufferedReader.readLine();
         }
         bufferedReader.close();
 
+        for (int i = 0; i < fileNameStrings[0].length(); i++) {
+            for (int j = 0; j < fileNameStrings.length; j++) {
+                if (fileNameStrings[0].charAt(i) == fileNameStrings[j].charAt(i)) {
+                    isSameFlag = true;
+                }
+                if (fileNameStrings[0].charAt(i) != fileNameStrings[j].charAt(i)) {
+                    isSameFlag = false;
+                    break;
+                }
+            }
+            if (isSameFlag) {
+                sameString += fileNameStrings[0].charAt(i);
+            }
+            if (!isSameFlag) {
+                sameString += "?";
+            }
+        }
+        bufferedWriter.write(sameString + "\n");
         bufferedWriter.flush();
         bufferedWriter.close();
     }

@@ -9,6 +9,7 @@ public class Solution8393 {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        scan.close();
         int n, sum = 0;
 
         do {
@@ -20,7 +21,5 @@ public class Solution8393 {
         }
 
         System.out.println(sum);
-
-        scan.close();
     }
 }
