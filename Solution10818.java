@@ -1,4 +1,8 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 /*  최소, 최대
     N개의 정수가 주어진다. 이때, 최솟값과 최댓값을 구하는 프로그램을 작성하시오.
@@ -9,33 +13,36 @@ import java.util.Scanner;
  */
 public class Solution10818 {
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
         int n, min, max;
         int[] array;
+        String[] line;
 
-        do {
-            n = scanner.nextInt();
-        } while (n < 1 || n > 1000000);
+        n = Integer.parseInt(bufferedReader.readLine());
 
         array = new int[n];
+        line = bufferedReader.readLine().split(" ");
 
         for (int i = 0; i < array.length; i++) {
-            do {
-                array[i] = scanner.nextInt();
-            } while (array[i] < -1000000 || array[i] > 1000000);
+            array[i] = Integer.parseInt(line[i]);
         }
+        bufferedReader.close();
 
         min = array[0];
         max = array[0];
 
         for (int j = 1; j < array.length; j++) {
-            min = min < array[j] ? min : array[j];
-            max = max > array[j] ? max : array[j];
+            if (min > array[j]) {
+                min = array[j];
+            }
+            if (max < array[j]) {
+                max = array[j];
+            }
         }
-
-        System.out.println(min + " " + max);
-
-        scanner.close();
+        bufferedWriter.write(min + " " + max + "\n");
+        bufferedWriter.flush();
+        bufferedWriter.close();
     }
 }
