@@ -44,7 +44,7 @@ public class Solution4153 {
         bufferedWriter.close();
     }
 
-    public static String checkVertical(int[] numRepo) {
+    static String checkVertical(int[] numRepo) {
         int maxNumber = 0;
 
         maxNumber = numRepo[0];

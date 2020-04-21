@@ -36,7 +36,7 @@ public class Solution4673 {
         }
     }
 
-    public static int findNumber(int n) {
+    static int findNumber(int n) {
         int result = n;
         do {
             result += n % 10;

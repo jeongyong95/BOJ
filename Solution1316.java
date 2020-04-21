@@ -30,7 +30,7 @@ public class Solution1316 {
         System.out.println(counter);
     }
 
-    public static boolean groupWordChecker(String string) {
+    static boolean groupWordChecker(String string) {
         boolean[] alphaChecker = new boolean[26];
         char temp;
 

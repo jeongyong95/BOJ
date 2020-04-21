@@ -16,7 +16,7 @@ public class Solution1065 {
         scanner.close();
     }
 
-    public static int findOne(int number) {
+    static int findOne(int number) {
         int temp = number, counter = 0;
         if (temp < 100) {
             return temp;

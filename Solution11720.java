@@ -21,7 +21,7 @@ public class Solution11720 {
         scanner.close();
     }
 
-    public static BigInteger sum(String numberString) {
+    static BigInteger sum(String numberString) {
         BigInteger remainder, result = BigInteger.valueOf(0), number = new BigInteger(numberString);
 
         for (int i = 0; i < numberString.length(); i++) {

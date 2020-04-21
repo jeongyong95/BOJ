@@ -39,7 +39,7 @@ public class Solution4948 {
         bufferedWriter.close();
     }
 
-    public static int findPrimeNumber(int n) {
+    static int findPrimeNumber(int n) {
         int findedPrimeNumbers = 0;
         int[] primeNumbers = new int[2 * n + 1];
 
