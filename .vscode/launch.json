@@ -6,6 +6,62 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Solution11650",
+            "request": "launch",
+            "mainClass": "Solution11650",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution1427",
+            "request": "launch",
+            "mainClass": "Solution1427",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution2751_sortLib",
+            "request": "launch",
+            "mainClass": "Solution2751_sortLib",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution2108",
+            "request": "launch",
+            "mainClass": "Solution2108",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution10989",
+            "request": "launch",
+            "mainClass": "Solution10989",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution2751_quick",
+            "request": "launch",
+            "mainClass": "Solution2751_quick",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution2751",
+            "request": "launch",
+            "mainClass": "Solution2751",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution2750_sortLib",
+            "request": "launch",
+            "mainClass": "Solution2750_sortLib",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Solution2750_quick",
             "request": "launch",
             "mainClass": "Solution2750_quick",
