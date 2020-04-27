@@ -1,3 +1,5 @@
+package problems;
+
 /*  Fly me to the Alpha Centauri
     우현이는 어린 시절, 지구 외의 다른 행성에서도 인류들이 살아갈 수 있는 미래가 오리라 믿었다.
     그리고 그가 지구라는 세상에 발을 내려 놓은 지 23년이 지난 지금, 
@@ -24,6 +26,7 @@
     필요한 최소한의 공간이동 장치 작동 회수를 출력한다.
  */
 public class Solution1011 {
+
     public static void main(String[] args) {
 
     }

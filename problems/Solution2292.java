@@ -1,4 +1,4 @@
-import java.util.Scanner;
+package problems;
 
 /*  벌집
     위의 그림과 같이 육각형으로 이루어진 벌집이 있다.
@@ -10,12 +10,7 @@ import java.util.Scanner;
     입력으로 주어진 방까지 최소 개수의 방을 지나서 갈 때 몇 개의 방을 지나는지 출력한다.
  */
 public class Solution2292 {
-
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        // 적층될수록 6의 배수로 한 층의 셀이 늘어난다. 1,6,12,18,24...
-        // 각층의 최대수 내에 있는 수는 곱한 횟수만큼의 경로를 필요로 한다.
-        scanner.close();
 
     }
 }

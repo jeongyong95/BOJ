@@ -1,8 +1,4 @@
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
+package problems;
 
 /*  택시 기하학
     19세기 독일 수학자 헤르만 민코프스키는 비유클리드 기하학 중 택시 기하학을 고안했다.
@@ -17,13 +13,7 @@ import java.io.OutputStreamWriter;
     정답과의 오차는 0.0001까지 허용한다.
  */
 public class Solution3053 {
+    public static void main(String[] args) {
 
-    public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
-
-        bufferedReader.close();
-        bufferedWriter.flush();
-        bufferedWriter.close();
     }
 }

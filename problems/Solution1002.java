@@ -1,3 +1,5 @@
+package problems;
+
 /*  터렛
     조규현과 백승환은 터렛에 근무하는 직원이다. 하지만 워낙 존재감이 없어서 인구수는 차지하지 않는다.
     다음은 조규현과 백승환의 사진이다.
@@ -13,7 +15,6 @@
     만약 류재명이 있을 수 있는 위치의 개수가 무한대일 경우에는 -1을 출력한다.
  */
 public class Solution1002 {
-
     public static void main(String[] args) {
 
     }

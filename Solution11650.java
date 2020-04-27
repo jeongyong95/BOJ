@@ -3,6 +3,7 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.Arrays;
 
 /*  좌표 정렬하기
     2차원 평면 위의 점 N개가 주어진다.
@@ -26,9 +27,7 @@ public class Solution11650 {
             locations[i] = new Location(Integer.parseInt(line[0]), Integer.parseInt(line[1]));
         }
         bufferedReader.close();
-        for (int i = 0; i < locations.length; i++) {
-
-        }
+        Arrays.sort(locations);
 
         for (int i = 0; i < locations.length; i++) {
             bufferedWriter.write(locations[i].x + " " + locations[i].y + "\n");
@@ -37,13 +36,29 @@ public class Solution11650 {
         bufferedWriter.close();
     }
 
-    static class Location {
+    static class Location implements Comparable<Location> {
         int x;
         int y;
 
         Location(int x, int y) {
             this.x = x;
             this.y = y;
+        }
+
+        @Override
+        public int compareTo(Location location) {
+            if (this.x > location.x) {
+                return 1;
+            }
+            if (this.x == location.x) {
+                if (this.y > location.y) {
+                    return 1;
+                }
+                if (this.y == location.y) {
+                    return 0;
+                }
+            }
+            return -1;
         }
     }
 

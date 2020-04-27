@@ -1,8 +1,4 @@
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
+package problems;
 
 /*  별 찍기 - 10
     재귀적인 패턴으로 별을 찍어 보자.
@@ -19,14 +15,7 @@ import java.io.OutputStreamWriter;
     첫째 줄부터 N번째 줄까지 별을 출력한다.
  */
 public class Solution2447 {
+    public static void main(String[] args) {
 
-    public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
-        int n = Integer.parseInt(bufferedReader.readLine());
-        bufferedReader.close();
-
-        bufferedWriter.flush();
-        bufferedWriter.close();
     }
 }
