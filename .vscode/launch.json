@@ -6,6 +6,62 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Solution15657",
+            "request": "launch",
+            "mainClass": "Solution15657",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution15656",
+            "request": "launch",
+            "mainClass": "Solution15656",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution15655",
+            "request": "launch",
+            "mainClass": "Solution15655",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution15654",
+            "request": "launch",
+            "mainClass": "Solution15654",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution15652",
+            "request": "launch",
+            "mainClass": "Solution15652",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution15651",
+            "request": "launch",
+            "mainClass": "Solution15651",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution15650",
+            "request": "launch",
+            "mainClass": "Solution15650",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution15649",
+            "request": "launch",
+            "mainClass": "Solution15649",
+            "projectName": "BOJ_53373b11"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Solution10814",
             "request": "launch",
             "mainClass": "Solution10814",
