@@ -1,6 +1,6 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 /*  A+B - 5
     두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.
@@ -10,29 +10,25 @@ import java.util.Scanner;
     각 테스트 케이스마다 A+B를 출력한다.
  */
 public class Solution10952 {
-
-    // 더 적절하게 구현해야함
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        List<Integer> result = new ArrayList<Integer>();
-        int a, b;
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        Integer a, b;
+        StringBuilder sb = new StringBuilder();
 
         do {
-            a = scan.nextInt();
-            b = scan.nextInt();
+            String[] strings = bufferedReader.readLine().split(" ");
+            a = Integer.parseInt(strings[0]);
+            b = Integer.parseInt(strings[1]);
 
             if (a == 0 && b == 0) {
                 break;
             }
 
-            result.add(a + b);
+            sb.append(a + b + "\n");
+        } while (true);
 
-        } while (a > 0 && b < 10);
-
-        for (Object object : result) {
-            System.out.println(object);
-        }
-        scan.close();
+        bufferedReader.close();
+        System.out.println(sb);
     }
 
 }

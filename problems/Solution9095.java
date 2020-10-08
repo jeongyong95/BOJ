@@ -1,8 +1,4 @@
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
+package problems;
 
 /*  1, 2, 3 더하기
     정수 4를 1, 2, 3의 합으로 나타내는 방법은 총 7가지가 있다. 합을 나타낼 때는 수를 1개 이상 사용해야 한다.
@@ -25,16 +21,4 @@ import java.io.OutputStreamWriter;
  */
 public class Solution9095 {
 
-    public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
-
-        int n = Integer.parseInt(bufferedReader.readLine());
-        bufferedReader.close();
-
-    }
-
-    static int dp() {
-
-    }
 }

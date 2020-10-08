@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 /*  A+B - 4
@@ -9,28 +7,18 @@ import java.util.Scanner;
     각 테스트 케이스마다 A+B를 출력한다.
  */
 public class Solution10951 {
-
-    // 이것도 개선이 필요하다
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int a, b;
-        List<Integer> result = new ArrayList<Integer>();
+        Scanner sc = new Scanner(System.in);
+        Integer a, b;
+        StringBuilder sb = new StringBuilder();
 
-        do {
-            a = scanner.nextInt();
-            b = scanner.nextInt();
-
-            if (a <= 0 || b >= 10)
-                break;
-
-            result.add(a + b);
-
-        } while (scanner.hasNextInt());
-
-        for (Object object : result) {
-            System.out.println(object);
+        while (sc.hasNextInt()) {
+            a = sc.nextInt();
+            b = sc.nextInt();
+            sb.append(a + b + "\n");
         }
 
-        scanner.close();
+        sc.close();
+        System.out.println(sb);
     }
 }

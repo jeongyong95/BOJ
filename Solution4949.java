@@ -3,6 +3,7 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.Stack;
 
 /*  균형잡힌 세상
     세계는 균형이 잘 잡혀있어야 한다. 양과 음, 빛과 어둠 그리고 왼쪽 괄호와 오른쪽 괄호처럼 말이다.
@@ -22,11 +23,47 @@ import java.io.OutputStreamWriter;
 public class Solution4949 {
 
     public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        Stack<Character> stack = new Stack<>();
+        StringBuilder sb = new StringBuilder();
 
-        bufferedReader.close();
-        bufferedWriter.flush();
-        bufferedWriter.close();
+        String string = br.readLine();
+
+        while (!string.equals(".")) {
+            stack.clear();
+            char[] arr = string.toCharArray();
+            for (int i = 0; i < arr.length; i++) {
+                if (arr[i] == '(' || arr[i] == '[') {
+                    stack.push(arr[i]);
+                    continue;
+                }
+                if (!stack.isEmpty()) {
+                    if (arr[i] == ')' && stack.peek() == '(') {
+                        stack.pop();
+                        continue;
+                    }
+                    if (arr[i] == ']' && stack.peek() == '[') {
+                        stack.pop();
+                        continue;
+                    }
+                }
+                if (arr[i] == ')' || arr[i] == ']') {
+                    stack.push(arr[i]);
+                }
+            }
+            if (stack.isEmpty()) {
+                sb.append("yes\n");
+            }
+            if (!stack.isEmpty()) {
+                sb.append("no\n");
+            }
+            string = br.readLine();
+        }
+        br.close();
+
+        bw.write(sb + "\n");
+        bw.flush();
+        bw.close();
     }
 }
