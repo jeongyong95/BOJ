@@ -1,4 +1,8 @@
-package problems;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 /*  벌집
     위의 그림과 같이 육각형으로 이루어진 벌집이 있다.
@@ -10,7 +14,27 @@ package problems;
     입력으로 주어진 방까지 최소 개수의 방을 지나서 갈 때 몇 개의 방을 지나는지 출력한다.
  */
 public class Solution2292 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
+        long n = Integer.parseInt(br.readLine());
+        br.close();
+
+        int result = 1;
+        long range = 1;
+        long temp = 1;
+
+        while (true) {
+            if (n <= range) {
+                break;
+            }
+            temp = 6 * result++;
+            range += temp;
+        }
+
+        bw.write(result + "\n");
+        bw.flush();
+        bw.close();
     }
 }
