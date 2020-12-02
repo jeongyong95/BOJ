@@ -4,9 +4,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class Solution11727 {
-
-    private static int[] memo = new int[1001];
+public class Solution11726 {
+    private static int[] d = new int[1001];
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -18,13 +17,11 @@ public class Solution11727 {
     }
 
     public static int dp(int n) {
-        memo[1] = 1;
-        memo[2] = 3;
-
+        d[1] = 1;
+        d[2] = 2;
         for (int i = 3; i <= n; i++) {
-            memo[i] = (2 * memo[i - 2] + memo[i - 1]) % 10007;
+            d[i] = (d[i - 1] + d[i - 2]) % 10007;
         }
-
-        return memo[n];
+        return d[n];
     }
 }

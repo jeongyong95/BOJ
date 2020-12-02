@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Solution9095",
+            "request": "launch",
+            "mainClass": "Solution9095",
+            "projectName": "BOJ_ed999ef5"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution11727",
+            "request": "launch",
+            "mainClass": "Solution11727",
+            "projectName": "BOJ_ed999ef5"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution11726",
+            "request": "launch",
+            "mainClass": "Solution11726",
+            "projectName": "BOJ_ed999ef5"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution1463_dp",
+            "request": "launch",
+            "mainClass": "Solution1463_dp",
+            "projectName": "BOJ_ed999ef5"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Solution10250",
             "request": "launch",
             "mainClass": "problems.Solution10250",

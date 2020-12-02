@@ -36,12 +36,16 @@ public class Solution13023 {
 
         for (int i = 0; i < m; i++) {
             String[] temp = br.readLine().split(" ");
+
             int from = Integer.parseInt(temp[0]);
             int to = Integer.parseInt(temp[1]);
+
             edgeList.add(new Edge(from, to));
             edgeList.add(new Edge(to, from));
+
             adjacencyMatrix[from][to] = true;
             adjacencyMatrix[to][from] = true;
+
             adjacencyList[from].add(to);
             adjacencyList[to].add(from);
         }
