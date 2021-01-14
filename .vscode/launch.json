@@ -6,6 +6,76 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Solution11053",
+            "request": "launch",
+            "mainClass": "Solution11053",
+            "projectName": "BOJ_ed999ef5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution2193",
+            "request": "launch",
+            "mainClass": "Solution2193",
+            "projectName": "BOJ_ed999ef5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution10844",
+            "request": "launch",
+            "mainClass": "Solution10844",
+            "projectName": "BOJ_ed999ef5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution15990",
+            "request": "launch",
+            "mainClass": "Solution15990",
+            "projectName": "BOJ_ed999ef5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution9184",
+            "request": "launch",
+            "mainClass": "Solution9184",
+            "projectName": "BOJ_ed999ef5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution10757",
+            "request": "launch",
+            "mainClass": "Solution10757",
+            "projectName": "BOJ_ed999ef5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution15757",
+            "request": "launch",
+            "mainClass": "Solution15757",
+            "projectName": "BOJ_ed999ef5"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution16194Baek",
+            "request": "launch",
+            "mainClass": "Solution16194Baek",
+            "projectName": "BOJ_ed999ef5"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution16194",
+            "request": "launch",
+            "mainClass": "Solution16194",
+            "projectName": "BOJ_ed999ef5"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution11052",
+            "request": "launch",
+            "mainClass": "Solution11052",
+            "projectName": "BOJ_ed999ef5"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Solution9095",
             "request": "launch",
             "mainClass": "Solution9095",
