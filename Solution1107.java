@@ -15,5 +15,6 @@ public class Solution1107 {
         int[] brokenArr = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
         br.close();
 
+        int[] resultArr = new int[1000000];
     }
 }
