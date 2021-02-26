@@ -11,40 +11,20 @@ public class Solution6064 {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         int t = Integer.parseInt(br.readLine());
+
         while (t-- > 0) {
             int[] arr = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-
-            int m = arr[0];
-            int n = arr[1];
-            int x = arr[2];
-            int y = arr[3];
-
-            int year = 0;
-            int tempX = 0;
-            int tempY = 0;
-            while (true) {
-                year++;
-                tempX++;
-                tempY++;
-
-                if (tempX == x && tempY == y) {
-                    bw.write(year + "\n");
+            arr[2] -= 1;
+            arr[3] -= 1;
+            int result = -1;
+            for (int i = arr[2]; i < arr[0] * arr[1]; i += arr[0]) {
+                if (i % arr[1] == arr[3]) {
+                    result = i + 1;
                     break;
-                }
-                if (tempX == m && tempY == n) {
-                    bw.write(-1 + "\n");
-                    break;
-                }
-                if (tempX == m) {
-                    tempX = 1;
-                }
-
-                if (tempY == n) {
-                    tempY = 1;
                 }
             }
+            bw.write(result + "\n");
         }
-        br.close();
         bw.flush();
         bw.close();
     }

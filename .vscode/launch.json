@@ -6,6 +6,83 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Solution15657Repeat",
+            "request": "launch",
+            "mainClass": "Solution15657Repeat",
+            "projectName": "boj_ed9a1b15"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution15663",
+            "request": "launch",
+            "mainClass": "Solution15663",
+            "projectName": "boj_ed9a1b15"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution15663Repeat",
+            "request": "launch",
+            "mainClass": "Solution15663Repeat",
+            "projectName": "boj_ed9a1b15"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution15656Repeat",
+            "request": "launch",
+            "mainClass": "Solution15656Repeat",
+            "projectName": "boj_ed9a1b15"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution15655Repeat",
+            "request": "launch",
+            "mainClass": "Solution15655Repeat",
+            "projectName": "boj_ed9a1b15"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution15654Repeat",
+            "request": "launch",
+            "mainClass": "Solution15654Repeat",
+            "projectName": "boj_ed9a1b15"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution15652Repeat",
+            "request": "launch",
+            "mainClass": "Solution15652Repeat",
+            "projectName": "boj_ed9a1b15"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution15651Repeat",
+            "request": "launch",
+            "mainClass": "Solution15651Repeat",
+            "projectName": "boj_ed9a1b15"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution15650Repeat",
+            "request": "launch",
+            "mainClass": "Solution15650Repeat",
+            "projectName": "boj_ed9a1b15"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution15649Repeat",
+            "request": "launch",
+            "mainClass": "Solution15649Repeat",
+            "projectName": "boj_ed9a1b15"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution1748",
+            "request": "launch",
+            "mainClass": "Solution1748",
+            "projectName": "boj_ed9a1b15"
+        },
+        {
+            "type": "java",
             "name": "Launch Solution1107",
             "request": "launch",
             "mainClass": "Solution1107",
