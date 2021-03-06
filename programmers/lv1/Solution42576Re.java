@@ -3,7 +3,7 @@ package programmers.lv1;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SolutionHash01V2 {
+public class Solution42576Re {
     public String solution(String[] participant, String[] completion) {
         String answer = "";
         Map<String, Integer> ptcMap = new HashMap<>();

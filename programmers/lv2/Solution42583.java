@@ -3,7 +3,7 @@ package programmers.lv2;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class SolutionStackQ01 {
+public class Solution42583 {
     public int solution(int bridge_length, int weight, int[] truck_weights) {
         int answer = 0;
         Queue<Integer> bridge = new LinkedList<>();

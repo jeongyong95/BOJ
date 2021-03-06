@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class SolutionHash04 {
+public class Solution42579 {
     public int[] solution(String[] genres, int[] plays) {
         List<Integer> answerList = new ArrayList<>();
 

@@ -3,7 +3,7 @@ package programmers.lv2;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SolutionHash03 {
+public class Solution42578 {
     public int solution(String[][] clothes) {
         int answer = 1;
         Map<String, Integer> map = new HashMap<>();

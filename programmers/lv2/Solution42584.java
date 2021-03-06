@@ -1,6 +1,6 @@
 package programmers.lv2;
 
-public class SolutionStackQ02 {
+public class Solution42584 {
     // 1. 배열에 반복문을 돌린다.
     // 2. stack에 인덱스를 넣어서 돌린다.
     public int[] solution(int[] prices) {

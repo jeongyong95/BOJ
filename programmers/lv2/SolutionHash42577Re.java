@@ -2,7 +2,7 @@ package programmers.lv2;
 
 import java.util.Arrays;
 
-public class SolutionHash02V2 {
+public class SolutionHash42577Re {
     public boolean solution(String[] phone_book) {
         boolean answer = true;
 

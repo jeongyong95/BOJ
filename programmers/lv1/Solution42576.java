@@ -2,7 +2,7 @@ package programmers.lv1;
 
 import java.util.Arrays;
 
-public class SolutionHash01 {
+public class Solution42576 {
     public String solution(String[] participant, String[] completion) {
         int i = 0;
         Arrays.sort(participant);

@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class SolutionStackQ03 {
+public class Solution42586 {
     public static void main(String[] args) {
         int[] progresses = { 93, 30, 55 };
         int[] speeds = { 1, 30, 5 };
