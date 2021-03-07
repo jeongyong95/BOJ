@@ -5,47 +5,49 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class Solution42627 {
-    // 1. 우선순위 큐로 힙을 구현한다.
-    // 2. 현재 시간에 시작할 수 있는 작업 중 버스트 타임이 작은 것을 먼저 처리한다.
-    // 3. 작업이 완료되면 answer에 더한다.
-    // 4. 현재 시간에 작업시간을 그만큼 더한다.
-
+    // 1. 요청시간<=현재시간인 작업을 모두 큐에 추가한다.
+    // 2. 큐에 있는 작업을 한 번 한다. 왜냐하면 매번 비교해야하기 때문이다.
+    // 3. time과 결과 배열에 담을 총 작업시간을 구분해서 기록한다.
+    // 4. 큐가 비어있다면, 현재 작업하는 게 없으므로 가장 가까운 작업을 수행한다.
     public static void main(String[] args) {
-        int[][] jobs = { { 1, 9 }, { 2, 6 }, { 0, 3 } };
-        solution(jobs);
+        int[][] jobs = { { 0, 3 }, { 1, 9 }, { 2, 6 } };
+        int result = solution(jobs);
     }
 
     public static int solution(int[][] jobs) {
         int answer = 0;
-        int time = 0;
-        int start = 0;
-        Arrays.sort(jobs, new Comparator<int[]>() {
+        int current = 0;
+        int complete = 0;
+        int count = 0;
+        PriorityQueue<int[]> q = new PriorityQueue<>(new Comparator<int[]>() {
 
+            @Override
+            public int compare(int[] o1, int[] o2) {
+                return o1[1] - o2[1];
+            }
+        });
+
+        Arrays.sort(jobs, new Comparator<int[]>() {
             @Override
             public int compare(int[] o1, int[] o2) {
                 return o1[0] - o2[0];
             }
-
         });
-        PriorityQueue<int[]> heap = new PriorityQueue<>((o1, o2) -> o1[1] - o2[1]);
 
-        while (start < jobs.length) {
-            for (int i = start; i < jobs.length; i++) {
-                if (jobs[start][0] <= time) {
-                    heap.offer(jobs[start++]);
-                } else {
-                    break;
-                }
+        while (count < jobs.length) {
+            while (complete < jobs.length && jobs[complete][0] <= current) {
+                q.offer(jobs[complete++]);
             }
 
-            if (!heap.isEmpty()) {
-                int[] temp = heap.poll();
-                answer += temp[1] + time - temp[0];
-                time += temp[1];
+            if (q.isEmpty()) {
+                current = jobs[complete][0];
             } else {
-                time = jobs[start][0];
+                int[] finishedJob = q.poll();
+                count++;
+                current += finishedJob[1];
+                answer += current - finishedJob[0];
             }
         }
-        return (int) Math.floor(answer / jobs.length);
+        return answer / jobs.length;
     }
 }
