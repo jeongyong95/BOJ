@@ -9,9 +9,9 @@ public class Solution12926 {
                 continue;
             }
 
-            if (arr[i] < 'a') {
+            if (arr[i] >= 'A' && arr[i] <= 'Z') {
                 arr[i] += n;
-                if (arr[i] >= 'a') {
+                if (arr[i] > 'Z') {
                     arr[i] = (char) (arr[i] - 'Z' + 64);
                 }
             } else {
@@ -25,7 +25,6 @@ public class Solution12926 {
         for (int i = 0; i < arr.length; i++) {
             sb.append(arr[i]);
         }
-
         return sb.toString();
     }
 }
