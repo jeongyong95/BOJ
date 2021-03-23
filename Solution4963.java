@@ -16,15 +16,16 @@ public class Solution4963 {
         StringTokenizer st;
         int w, h;
 
-        do {
+        while (true) {
             st = new StringTokenizer(br.readLine());
-
-            // w, h <= 50
             w = Integer.parseInt(st.nextToken());
             h = Integer.parseInt(st.nextToken());
 
-            int[][] map = new int[h][w];
+            if (w == 0 && h == 0) {
+                break;
+            }
 
+            int[][] map = new int[h][w];
             for (int i = 0; i < map.length; i++) {
                 st = new StringTokenizer(br.readLine());
                 for (int j = 0; j < map[i].length; j++) {
@@ -32,8 +33,7 @@ public class Solution4963 {
                 }
             }
             bw.write(bfs(map) + "\n");
-        } while (w != 0 && h != 0);
-
+        }
         br.close();
         bw.flush();
         bw.close();
@@ -49,29 +49,33 @@ public class Solution4963 {
         // 0,0부터 값이 1이면 큐에 넣는다.
         // 인접한 부분이 방문되었으면 넘어가고 방문되지 않았으면 고립된 섬이므로 체크한다
 
-        for (int i = 1; i < map.length - 1; i++) {
-            for (int j = 1; j < map[i].length - 1; j++) {
-                int[] xy = { i, j };
-                q.offer(xy);
-                visited[i][j] = true;
+        for (int i = 0; i < map.length; i++) {
+            for (int j = 0; j < map[i].length; j++) {
+                if (!visited[i][j] && map[i][j] == 1) {
+                    int[] start = { i, j };
+                    q.offer(start);
+                    visited[i][j] = true;
 
-                while (!q.isEmpty()) {
-                    boolean isolationFlag = true;
-                    int[] target = q.poll();
-                    visited[target[0]][target[1]] = true;
+                    while (!q.isEmpty()) {
+                        int[] current = q.poll();
 
-                    for (int k = 0; k < searchDirection.length; k++) {
-                        int x = target[0] + searchDirection[k][0];
-                        int y = target[1] + searchDirection[k][1];
-                        if (map[x][y] == 1 && visited[x][y]) {
-                            isolationFlag = false;
+                        for (int k = 0; k < searchDirection.length; k++) {
+                            int x = current[0] + searchDirection[k][0];
+                            int y = current[1] + searchDirection[k][1];
+                            if (x > map.length - 1 || x < 0 || y > map[x].length - 1 || y < 0) {
+                                continue;
+                            }
+                            if (map[x][y] == 1) {
+                                int[] next = { x, y };
+                                q.offer(next);
+                                visited[x][y] = true;
+                            }
                         }
-
                     }
+                    answer++;
                 }
             }
         }
-
         return answer;
     }
 }
