@@ -41,34 +41,26 @@ public class Solution4963 {
 
     static int bfs(int[][] map) {
         int answer = 0;
-        int[][] searchDirection = { { 1, 0 }, { 0, 1 }, { -1, 0 }, { 0, -1 }, { 1, 1 }, { -1, -1 }, { 1, -1 },
-                { -1, 1 } };
-        boolean[][] visited = new boolean[map.length][map[0].length];
+        int[] moveH = { -1, -1, -1, 0, 0, 1, 1, 1 };
+        int[] moveW = { -1, 0, 1, -1, 1, -1, 0, 1 };
+
         Queue<int[]> q = new LinkedList<>();
-
-        // 0,0부터 값이 1이면 큐에 넣는다.
-        // 인접한 부분이 방문되었으면 넘어가고 방문되지 않았으면 고립된 섬이므로 체크한다
-
         for (int i = 0; i < map.length; i++) {
             for (int j = 0; j < map[i].length; j++) {
-                if (!visited[i][j] && map[i][j] == 1) {
+                if (map[i][j] == 1) {
                     int[] start = { i, j };
                     q.offer(start);
-                    visited[i][j] = true;
+                    map[i][j] = 0;
 
                     while (!q.isEmpty()) {
                         int[] current = q.poll();
-
-                        for (int k = 0; k < searchDirection.length; k++) {
-                            int x = current[0] + searchDirection[k][0];
-                            int y = current[1] + searchDirection[k][1];
-                            if (x > map.length - 1 || x < 0 || y > map[x].length - 1 || y < 0) {
-                                continue;
-                            }
-                            if (map[x][y] == 1) {
-                                int[] next = { x, y };
-                                q.offer(next);
-                                visited[x][y] = true;
+                        for (int k = 0; k < 8; k++) {
+                            int[] temp = { current[0] + moveH[k], current[1] + moveW[k] };
+                            if (temp[0] >= 0 && temp[0] < map.length && temp[1] >= 0 && temp[1] < map[temp[0]].length) {
+                                if (map[temp[0]][temp[1]] == 1) {
+                                    q.offer(temp);
+                                    map[temp[0]][temp[1]] = 0;
+                                }
                             }
                         }
                     }
