@@ -1,4 +1,4 @@
-public class Node implements Comparable<Node> {
+class Node implements Comparable<Node> {
     int node;
     int cost;
 
