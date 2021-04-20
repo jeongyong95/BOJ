@@ -6,33 +6,33 @@ import java.io.OutputStreamWriter;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Solution1197 {
+public class Solution1922 {
+    static Edge[] edges;
     static int[] link;
-    static Edge[] edgeArr;
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws NumberFormatException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        int v = Integer.parseInt(st.nextToken());
-        int e = Integer.parseInt(st.nextToken());
+        int n = Integer.parseInt(br.readLine());
+        int m = Integer.parseInt(br.readLine());
 
-        link = new int[v + 1];
-        for (int i = 1; i <= v; i++) {
+        link = new int[n + 1];
+        for (int i = 1; i < link.length; i++) {
             link[i] = i;
         }
 
-        edgeArr = new Edge[e];
-        for (int i = 0; i < e; i++) {
-            st = new StringTokenizer(br.readLine());
+        edges = new Edge[m];
+        for (int i = 0; i < m; i++) {
+            StringTokenizer st = new StringTokenizer(br.readLine());
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
             int c = Integer.parseInt(st.nextToken());
-            edgeArr[i] = new Edge(a, b, c);
+
+            edges[i] = new Edge(a, b, c);
         }
         br.close();
-        Arrays.sort(edgeArr);
+        Arrays.sort(edges);
 
         int answer = kruskal();
         bw.write(answer + "\n");
@@ -42,8 +42,8 @@ public class Solution1197 {
 
     static int kruskal() {
         int answer = 0;
-        for (int i = 0; i < edgeArr.length; i++) {
-            Edge edge = edgeArr[i];
+        for (int i = 0; i < edges.length; i++) {
+            Edge edge = edges[i];
             if (!isSame(edge.start, edge.end)) {
                 unite(edge.start, edge.end);
                 answer += edge.cost;
@@ -53,18 +53,19 @@ public class Solution1197 {
     }
 
     static int find(int x) {
-        if (x == link[x])
+        if (x == link[x]) {
             return x;
+        }
         return link[x] = find(link[x]);
     }
 
     static void unite(int a, int b) {
         a = find(a);
         b = find(b);
-        if (a > b) {
-            link[a] = b;
-        } else if (a < b) {
+        if (a < b) {
             link[b] = a;
+        } else if (a > b) {
+            link[a] = b;
         }
     }
 

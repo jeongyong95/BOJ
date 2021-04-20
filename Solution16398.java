@@ -3,47 +3,51 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.Arrays;
+import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
-public class Solution1197 {
+public class Solution16398 {
     static int[] link;
-    static Edge[] edgeArr;
+    static PriorityQueue<Edge> pq = new PriorityQueue<>();
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws NumberFormatException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringTokenizer st;
+        int n = Integer.parseInt(br.readLine());
+        int[][] map = new int[n][n];
 
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        int v = Integer.parseInt(st.nextToken());
-        int e = Integer.parseInt(st.nextToken());
+        for (int i = 0; i < n; i++) {
+            st = new StringTokenizer(br.readLine());
+            for (int j = 0; j < n; j++) {
+                map[i][j] = Integer.parseInt(st.nextToken());
+            }
+        }
+        br.close();
 
-        link = new int[v + 1];
-        for (int i = 1; i <= v; i++) {
+        link = new int[n];
+        for (int i = 0; i < link.length; i++) {
             link[i] = i;
         }
 
-        edgeArr = new Edge[e];
-        for (int i = 0; i < e; i++) {
-            st = new StringTokenizer(br.readLine());
-            int a = Integer.parseInt(st.nextToken());
-            int b = Integer.parseInt(st.nextToken());
-            int c = Integer.parseInt(st.nextToken());
-            edgeArr[i] = new Edge(a, b, c);
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                pq.offer(new Edge(i, j, map[i][j]));
+            }
         }
-        br.close();
-        Arrays.sort(edgeArr);
 
-        int answer = kruskal();
+        long answer = kruskal();
         bw.write(answer + "\n");
         bw.flush();
         bw.close();
     }
 
-    static int kruskal() {
-        int answer = 0;
-        for (int i = 0; i < edgeArr.length; i++) {
-            Edge edge = edgeArr[i];
+    static long kruskal() {
+        long answer = 0;
+
+        while (!pq.isEmpty()) {
+            Edge edge = pq.poll();
+
             if (!isSame(edge.start, edge.end)) {
                 unite(edge.start, edge.end);
                 answer += edge.cost;
@@ -53,19 +57,16 @@ public class Solution1197 {
     }
 
     static int find(int x) {
-        if (x == link[x])
+        if (x == link[x]) {
             return x;
+        }
         return link[x] = find(link[x]);
     }
 
     static void unite(int a, int b) {
         a = find(a);
         b = find(b);
-        if (a > b) {
-            link[a] = b;
-        } else if (a < b) {
-            link[b] = a;
-        }
+        link[Math.max(a, b)] = Math.min(a, b);
     }
 
     static boolean isSame(int a, int b) {
