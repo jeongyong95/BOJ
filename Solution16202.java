@@ -3,7 +3,6 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.Collections;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
@@ -22,27 +21,31 @@ public class Solution16202 {
         int k = Integer.parseInt(st.nextToken());
 
         link = new int[n + 1];
-        for (int i = 1; i < link.length; i++) {
-            link[i] = i;
-        }
-
         for (int i = 1; i <= m; i++) {
             st = new StringTokenizer(br.readLine());
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
             pq.offer(new Edge(a, b, i));
         }
-        sb.append(kruskal() + " ");
+        br.close();
 
-        for (int i = 1; i < k; i++) {
+        for (int i = 1; i <= k; i++) {
             for (int j = 1; j < link.length; j++) {
                 link[j] = j;
             }
+            if (i > 1) {
+                pq.poll();
+            }
+            sb.append(kruskal(new PriorityQueue<Edge>(pq)) + " ");
         }
+        bw.write(sb.toString());
+        bw.flush();
+        bw.close();
     }
 
-    static int kruskal() {
+    static int kruskal(PriorityQueue<Edge> pq) {
         int answer = 0;
+
         while (!pq.isEmpty()) {
             Edge current = pq.poll();
             if (!isSame(current.start, current.end)) {
@@ -50,7 +53,20 @@ public class Solution16202 {
                 answer += current.cost;
             }
         }
-        return answer;
+
+        boolean possible = true;
+        for (int i = 1; i < link.length - 1; i++) {
+            if (!isSame(i, i + 1)) {
+                possible = false;
+                break;
+            }
+        }
+
+        if (possible) {
+            return answer;
+        } else {
+            return 0;
+        }
     }
 
     static int find(int x) {

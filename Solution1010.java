@@ -5,7 +5,6 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-// TODO : 다이나믹 프로그래밍으로 접근해야함
 public class Solution1010 {
     static int n;
     static int m;
