@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 public class Solution1010 {
     static int n;
     static int m;
-    static int answer = 0;
+    static int[][] dp;
 
     public static void main(String[] args) throws NumberFormatException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -20,25 +20,28 @@ public class Solution1010 {
             StringTokenizer st = new StringTokenizer(br.readLine());
             n = Integer.parseInt(st.nextToken());
             m = Integer.parseInt(st.nextToken());
-
-            getCombination(0);
-            sb.append(answer + "\n");
-            answer = 0;
+            dp = new int[n + 1][m + 1];
+            dp();
+            sb.append(dp[n][m] + "\n");
         }
         br.close();
+
         bw.write(sb.toString());
         bw.flush();
         bw.close();
     }
 
-    static void getCombination(int current) {
-        if (current == n - 1) {
-            answer++;
-            return;
+    static void dp() {
+        for (int i = 0; i <= m; i++) {
+            dp[1][i] = i;
         }
 
-        for (int i = current; i < m; i++) {
-            getCombination(i + 1);
+        for (int i = 2; i <= n; i++) {
+            for (int j = i; j <= m; j++) {
+                for (int k = i; k <= j; k++) {
+                    dp[i][j] += dp[i - 1][k - 1];
+                }
+            }
         }
     }
 }
