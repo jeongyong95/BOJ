@@ -3,80 +3,82 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import java.util.StringTokenizer;
 
 public class Solution11657 {
-    static Map<Integer, List<int[]>> map = new HashMap<>();
-    static int[] distance;
-    static boolean timeMachine = false;
+    static long INF = Long.MAX_VALUE / 2;
+    static Edge[] adj;
+    static long[] dist;
+    static StringBuilder sb = new StringBuilder();
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        StringTokenizer st = new StringTokenizer(br.readLine());
 
+        StringTokenizer st = new StringTokenizer(br.readLine());
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
 
-        distance = new int[n + 1];
-        for (int i = 1; i <= n; i++) {
-            map.put(i, new ArrayList<>());
-        }
-
-        while (m-- > 0) {
+        dist = new long[n + 1];
+        adj = new Edge[m];
+        for (int i = 0; i < m; i++) {
             st = new StringTokenizer(br.readLine());
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
-            int c = Integer.parseInt(st.nextToken());
-            int[] bc = new int[2];
-            bc[0] = b;
-            bc[1] = c;
-            map.get(a).add(bc);
+            long c = Long.parseLong(st.nextToken());
+            adj[i] = new Edge(a, b, c);
         }
         br.close();
 
         bellmanFord();
-        if (timeMachine) {
-            bw.write(-1 + "\n");
-        } else {
-            for (int i = 2; i < distance.length; i++) {
-                if (distance[i] == 50_000_000) {
-                    bw.write("-1\n");
-                } else {
-                    bw.write(distance[i] + "\n");
-                }
-            }
-        }
+        bw.write(sb.toString());
         bw.flush();
         bw.close();
     }
 
     static void bellmanFord() {
-        Arrays.fill(distance, 50_000_000);
-        distance[1] = 0;
+        for (int i = 2; i < dist.length; i++) {
+            dist[i] = INF;
+        }
+        dist[1] = 0;
 
-        for (int i = 1; i < distance.length; i++) {
-            List<int[]> currentList = map.get(i);
-            for (int j = 0, size = currentList.size(); j < size; j++) {
-                int[] current = currentList.get(j);
-                if (distance[i] != 5_000_000 && distance[current[0]] > distance[i] + current[1]) {
-                    distance[current[0]] = distance[i] + current[1];
+        int round = dist.length - 1;
+        for (int i = 1; i <= round; i++) {
+            for (int j = 0; j < adj.length; j++) {
+                Edge edge = adj[j];
+                // 현재 지점이 INF이면 도달할 수 없다는 이야기인데, 해당 간선이 음수 간선이면 연산이 된다.
+                if (dist[edge.u] != INF && dist[edge.v] > dist[edge.u] + edge.w) {
+                    dist[edge.v] = dist[edge.u] + edge.w;
+                    if (i == round) {
+                        sb.append("-1\n");
+                        return;
+                    }
                 }
             }
         }
-        for (int i = 1; i < distance.length; i++) {
-            List<int[]> currentList = map.get(i);
-            for (int[] js : currentList) {
-                if (distance[i] != 5_000_000 && distance[js[0]] > distance[i] + js[1]) {
-                    timeMachine = true;
-                    break;
-                }
+
+        for (int i = 2; i < dist.length; i++) {
+            if (dist[i] == INF) {
+                sb.append("-1\n");
+            } else {
+                sb.append(dist[i] + "\n");
             }
         }
+    }
+}
+
+class Edge {
+    int u;
+    int v;
+    long w;
+
+    public Edge() {
+
+    }
+
+    public Edge(int u, int v, long w) {
+        this.u = u;
+        this.v = v;
+        this.w = w;
     }
 }
