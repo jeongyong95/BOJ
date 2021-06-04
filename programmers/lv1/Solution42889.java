@@ -20,6 +20,6 @@ public class Solution42889 {
             list.add(count);
         }
 
-        return 0;
+        return null;
     }
 }
