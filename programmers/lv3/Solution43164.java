@@ -8,7 +8,6 @@ import java.util.Map;
 
 public class Solution43164 {
     static Map<String, List<Ticket>> ticketMap = new HashMap<>();
-    static Map<String, Boolean> visited = new HashMap<>();
     static String[] answer;
     static boolean isSolved = false;
 
